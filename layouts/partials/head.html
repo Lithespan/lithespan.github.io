@@ -1,0 +1,57 @@
+{{ $is404 := eq .Kind "404" }}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f3f0e6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#071d1a" media="(prefers-color-scheme: dark)">
+<meta name="description" content="{{ .Description | default site.Params.description }}">
+{{ if $is404 }}
+<meta name="robots" content="noindex, nofollow">
+{{ else }}
+<link rel="canonical" href="{{ .Permalink }}">
+<link rel="alternate" hreflang="en" href="{{ .Permalink }}">
+{{ end }}
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+{{ if not $is404 }}
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Lithespan">
+<meta property="og:title" content="{{ if .IsHome }}Lithespan | Software optimized for your hardware and OS{{ else }}{{ .Title }} | Lithespan{{ end }}">
+<meta property="og:description" content="{{ .Description | default site.Params.description }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:image" content="{{ site.Params.ogImage | absURL }}">
+<meta property="og:image:alt" content="Lithespan - software optimized for your hardware and OS">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ if .IsHome }}Lithespan | Software optimized for your hardware and OS{{ else }}{{ .Title }} | Lithespan{{ end }}">
+<meta name="twitter:description" content="{{ .Description | default site.Params.description }}">
+<meta name="twitter:image" content="{{ site.Params.ogImage | absURL }}">
+{{ end }}
+
+<title>{{ if $is404 }}Page not found | Lithespan{{ else if .IsHome }}Lithespan | Software optimized for your hardware and OS{{ else }}{{ .Title }} | Lithespan{{ end }}</title>
+
+<script>
+  (function () {
+    try {
+      var theme = localStorage.getItem("lithespan-theme");
+      if (theme === "light" || theme === "dark") document.documentElement.dataset.theme = theme;
+    } catch (error) {}
+  }());
+</script>
+
+{{ $styles := resources.Get "css/main.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
+{{ $theme := resources.Get "js/theme.js" | minify | fingerprint }}
+<script defer src="{{ $theme.RelPermalink }}" integrity="{{ $theme.Data.Integrity }}"></script>
+
+{{ if .IsHome }}
+{{ $organization := dict "@context" "https://schema.org" "@type" "Organization" "name" "Lithespan" "url" site.BaseURL "email" site.Params.email "description" site.Params.description "sameAs" (slice site.Params.github) }}
+{{ $website := dict "@context" "https://schema.org" "@type" "WebSite" "name" "Lithespan" "url" site.BaseURL "description" site.Params.description "publisher" (dict "@type" "Organization" "name" "Lithespan" "url" site.BaseURL) }}
+<script type="application/ld+json">{{ $organization | jsonify | safeJS }}</script>
+<script type="application/ld+json">{{ $website | jsonify | safeJS }}</script>
+{{ else if not $is404 }}
+{{ $webpage := dict "@context" "https://schema.org" "@type" "WebPage" "name" .Title "url" .Permalink "description" (.Description | default site.Params.description) "isPartOf" (dict "@type" "WebSite" "name" "Lithespan" "url" site.BaseURL) }}
+<script type="application/ld+json">{{ $webpage | jsonify | safeJS }}</script>
+{{ end }}

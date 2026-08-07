@@ -1,0 +1,78 @@
+{{ define "main" }}
+<section class="hero" aria-labelledby="hero-title">
+  <div class="shell hero-grid">
+    <div class="hero-copy">
+      <h1 id="hero-title">Optimized software for your hardware and operating system.</h1>
+      <p class="lede">Lithespan builds and maintains performance-optimized releases of compilers, runtimes, infrastructure software, OS packages, and OCI images for specific CPU and OS targets.</p>
+      <div class="actions">
+        <a class="button button-primary" href="mailto:{{ site.Params.email }}?subject=Lithespan%20workload%20assessment">Discuss your workload</a>
+        <a class="button button-secondary" href="/release-model/">How releases work</a>
+      </div>
+      <p class="scope-note">Public releases are free. Private targets, migration, maintenance extensions, and guarantees are paid.</p>
+    </div>
+  </div>
+</section>
+
+<section class="products section-pad" aria-labelledby="products-title">
+  <div class="shell">
+    <div class="section-heading split-heading">
+      <div>
+        <p class="section-label">PRODUCTS</p>
+        <h2 id="products-title">Optimized below the application layer.</h2>
+      </div>
+      <a class="text-link heading-link" href="/products/">View product scope</a>
+    </div>
+
+    <div class="product-grid compact-grid">
+      <article>
+        <p class="product-label">Compilers and runtimes</p>
+        <h3>C, C++, Go, Java, JS/TS, .NET, Python, Ruby, and Rust.</h3>
+      </article>
+      <article>
+        <p class="product-label">Infrastructure software</p>
+        <h3>NGINX, Envoy, etcd, containerd, Cilium, messaging, databases, and caches.</h3>
+      </article>
+      <article>
+        <p class="product-label">Operating-system packages</p>
+        <h3>Native packages for declared distributions, system ABIs, and architectures.</h3>
+      </article>
+      <article>
+        <p class="product-label">OCI images</p>
+        <h3>Docker-compatible images built from the same qualified releases.</h3>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section-dark section-pad" aria-labelledby="model-title">
+  <div class="shell model-compact">
+    <div>
+      <p class="section-label">RELEASE MODEL</p>
+      <h2 id="model-title">A release is a target, not a generic binary.</h2>
+    </div>
+    <div class="model-definition">
+      <p class="model-formula">Software × OS × CPU × workload × format</p>
+      <p>Every release states its source, target, benchmark method, compatibility results, SBOM, provenance, signatures, and maintenance window.</p>
+      <div class="inline-links inline-links-dark">
+        <a class="text-link text-link-dark" href="/release-model/">Release model</a>
+        <a class="text-link text-link-dark" href="/security/">Security</a>
+        <a class="text-link text-link-dark" href="/maintenance/">Maintenance</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact section-pad" aria-labelledby="contact-title">
+  <div class="shell contact-panel">
+    <div>
+      <p class="section-label">SERVICES</p>
+      <h2 id="contact-title">Bring us a workload.</h2>
+      <p>We assess the current system, build for the agreed target, support migration, and requalify releases as upstream software and fleets change.</p>
+    </div>
+    <div class="contact-action">
+      <a class="button button-primary" href="mailto:{{ site.Params.email }}?subject=Lithespan%20workload%20assessment">Discuss your workload</a>
+      <a class="text-link contact-link" href="/services/">Services and deliverables</a>
+    </div>
+  </div>
+</section>
+{{ end }}

@@ -1,0 +1,45 @@
+<header class="site-header">
+  <div class="shell header-inner">
+    <a class="brand" href="/" aria-label="Lithespan home">
+      <span class="brand-mark" aria-hidden="true"><span class="mark-pier"></span><span class="mark-span"></span><span class="mark-target"></span></span>
+      <span>Lithespan</span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="/products/">Products</a>
+      <a href="/release-model/">Release model</a>
+      <a href="/security/">Security</a>
+      <a href="/maintenance/">Maintenance</a>
+      <a href="/services/">Services</a>
+    </nav>
+
+    <div class="header-tools">
+      <div class="theme-switch" role="group" aria-label="Color theme">
+        <button type="button" data-theme-value="light" aria-label="Use light theme" aria-pressed="false" title="Light"><span class="theme-icon icon-sun" aria-hidden="true"></span></button>
+        <button type="button" data-theme-value="dark" aria-label="Use dark theme" aria-pressed="false" title="Dark"><span class="theme-icon icon-moon" aria-hidden="true"></span></button>
+        <button type="button" data-theme-value="auto" aria-label="Use system theme" aria-pressed="true" title="Auto"><span class="theme-icon icon-auto" aria-hidden="true"></span></button>
+      </div>
+      <a class="nav-contact" href="mailto:{{ site.Params.email }}">Contact</a>
+      <details class="mobile-menu">
+        <summary>Menu</summary>
+        <nav aria-label="Mobile navigation">
+          <div class="mobile-theme-row">
+            <span>Theme</span>
+            <div class="theme-switch" role="group" aria-label="Color theme">
+              <button type="button" data-theme-value="light" aria-label="Use light theme" aria-pressed="false" title="Light"><span class="theme-icon icon-sun" aria-hidden="true"></span></button>
+              <button type="button" data-theme-value="dark" aria-label="Use dark theme" aria-pressed="false" title="Dark"><span class="theme-icon icon-moon" aria-hidden="true"></span></button>
+              <button type="button" data-theme-value="auto" aria-label="Use system theme" aria-pressed="true" title="Auto"><span class="theme-icon icon-auto" aria-hidden="true"></span></button>
+            </div>
+          </div>
+          <a href="/products/">Products</a>
+          <a href="/release-model/">Release model</a>
+          <a href="/security/">Security</a>
+          <a href="/maintenance/">Maintenance</a>
+          <a href="/formats/">Formats</a>
+          <a href="/services/">Services</a>
+          <a href="mailto:{{ site.Params.email }}">Contact</a>
+        </nav>
+      </details>
+    </div>
+  </div>
+</header>

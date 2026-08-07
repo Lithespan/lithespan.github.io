@@ -1,0 +1,24 @@
+<footer class="site-footer">
+  <div class="shell footer-inner">
+    <div class="footer-statement">
+      <a class="brand footer-brand" href="/" aria-label="Lithespan home">
+        <span class="brand-mark" aria-hidden="true"><span class="mark-pier"></span><span class="mark-span"></span><span class="mark-target"></span></span>
+        <span>Lithespan</span>
+      </a>
+      <p>Hardware- and OS-optimized software releases, tested against defined workloads.</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <a href="/products/">Products</a>
+      <a href="/release-model/">Release model</a>
+      <a href="/security/">Security</a>
+      <a href="/maintenance/">Maintenance</a>
+      <a href="/formats/">Formats</a>
+      <a href="/services/">Services</a>
+    </nav>
+    <div class="footer-contact">
+      <a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a>
+      <a href="{{ site.Params.github }}">GitHub</a>
+    </div>
+    <p class="copyright">© {{ now.Year }} Lithespan. Standard public artifacts are free; contractual support requires an agreement.</p>
+  </div>
+</footer>

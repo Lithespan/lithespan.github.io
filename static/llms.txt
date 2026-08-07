@@ -1,0 +1,22 @@
+# Lithespan
+
+> Lithespan builds and maintains hardware- and OS-optimized software releases for defined CPU architectures, workloads, delivery formats, and support windows.
+
+Standard public releases, build definitions, and evidence are free. Customers pay for workload assessment, private composition, fleet-specific tuning, architecture migration, recurring qualification, extended maintenance, and contractual guarantees.
+
+## Products
+
+- [Products](https://lithespan.com/products/): Compilers, language runtimes, infrastructure software, operating-system packages, and OCI images.
+- [Release model](https://lithespan.com/release-model/): How platform, architecture, workload, output, evidence, and support state define a release.
+- [Formats and distribution](https://lithespan.com/formats/): OCI images, native packages, archives, Nix outputs, and later system images.
+
+## Trust and lifecycle
+
+- [Security and supply chain](https://lithespan.com/security/): SBOMs, provenance, signatures, vulnerability monitoring, tests, and rebuild policy.
+- [Maintenance and support](https://lithespan.com/maintenance/): Upstream-aligned public maintenance and paid Extended Maintenance.
+
+## Work with Lithespan
+
+- [Services](https://lithespan.com/services/): Efficiency assessments, custom releases, architecture migrations, regression qualification, and lifecycle maintenance.
+- [GitHub](https://github.com/lithespan): Public source, release, and evidence repositories.
+- [Contact](mailto:contact@lithespan.com): Discuss a software and platform target.

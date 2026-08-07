@@ -1,0 +1,25 @@
+{{ define "main" }}
+<article>
+  <header class="page-hero">
+    <div class="shell page-hero-inner">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="/">Home</a><span aria-hidden="true">/</span><span aria-current="page">{{ .Title }}</span>
+      </nav>
+      <h1>{{ .Title }}</h1>
+      <p>{{ .Description }}</p>
+    </div>
+  </header>
+  <div class="shell page-layout">
+    <div class="prose">
+      {{ .Content }}
+    </div>
+    <aside class="page-cta" aria-label="Contact Lithespan">
+      {{ $subject := .Params.cta_subject | default "Lithespan workload target" }}
+      <p class="section-label">{{ .Params.cta_label | default "DISCUSS A TARGET" }}</p>
+      <h2>{{ .Params.cta_title | default "Bring us the software and the constraint." }}</h2>
+      <p>{{ .Params.cta_body | default "Include the operating system, architecture, workload, output format, and required support window." }}</p>
+      <a class="button button-primary" href="mailto:{{ site.Params.email }}?subject={{ $subject | urlquery }}">{{ .Params.cta_button | default "Contact Lithespan" }}</a>
+    </aside>
+  </div>
+</article>
+{{ end }}

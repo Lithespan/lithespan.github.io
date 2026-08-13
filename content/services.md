@@ -18,7 +18,9 @@ We profile the system, test viable changes, and deliver a baseline, benchmark re
 {{< detail id="build" title="Build or migrate" summary="Produce a tested release for the agreed workload and operating target." >}}
 We build and test software for the agreed hardware, OS, workload, and format. The release record includes benchmarks, compatibility results, trade-offs, and a maintenance proposal.
 
-Migration can cover hardware, OS, toolchain, architecture, or fleet changes. It includes dependency analysis, multi-target builds, rollout planning, and rollback preparation.
+Migration can cover hardware, OS, toolchain, architecture, image format, or fleet changes. It includes dependency analysis, multi-target builds, rollout planning, and rollback preparation.
+
+Machine-image work can package the agreed OS, kernel, drivers, runtimes, libraries, and application configuration as an AMI, Azure image or VHD, Google Cloud image, qcow2, or OVA. Delivery stays in the customer’s cloud account or private repository.
 {{< /detail >}}
 
 {{< detail id="maintain" title="Maintain and requalify" summary="Repeat the evidence as upstream software, fleets, and requirements change." >}}

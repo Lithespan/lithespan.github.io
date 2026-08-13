@@ -9,7 +9,6 @@
 <meta name="robots" content="noindex, nofollow">
 {{ else }}
 <link rel="canonical" href="{{ .Permalink }}">
-<link rel="alternate" hreflang="en" href="{{ .Permalink }}">
 {{ end }}
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
@@ -19,18 +18,18 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Lithespan">
-<meta property="og:title" content="{{ if .IsHome }}Lithespan | Software built for your hardware and OS{{ else }}{{ .Title }} | Lithespan{{ end }}">
+<meta property="og:title" content="{{ if .IsHome }}Lithespan | Software built for your system{{ else }}{{ .Title }} | Lithespan{{ end }}">
 <meta property="og:description" content="{{ .Description | default site.Params.description }}">
 <meta property="og:url" content="{{ .Permalink }}">
 <meta property="og:image" content="{{ site.Params.ogImage | absURL }}">
-<meta property="og:image:alt" content="Lithespan - software built for your hardware and operating system">
+<meta property="og:image:alt" content="Lithespan - software built for your system">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{{ if .IsHome }}Lithespan | Software built for your hardware and OS{{ else }}{{ .Title }} | Lithespan{{ end }}">
+<meta name="twitter:title" content="{{ if .IsHome }}Lithespan | Software built for your system{{ else }}{{ .Title }} | Lithespan{{ end }}">
 <meta name="twitter:description" content="{{ .Description | default site.Params.description }}">
 <meta name="twitter:image" content="{{ site.Params.ogImage | absURL }}">
 {{ end }}
 
-<title>{{ if $is404 }}Page not found | Lithespan{{ else if .IsHome }}Lithespan | Software built for your hardware and OS{{ else }}{{ .Title }} | Lithespan{{ end }}</title>
+<title>{{ if $is404 }}Page not found | Lithespan{{ else if .IsHome }}Lithespan | Software built for your system{{ else }}{{ .Title }} | Lithespan{{ end }}</title>
 
 <script>
   (function () {
@@ -47,10 +46,12 @@
 <script defer src="{{ $theme.RelPermalink }}" integrity="{{ $theme.Data.Integrity }}"></script>
 
 {{ if .IsHome }}
-{{ $organization := dict "@context" "https://schema.org" "@type" "Organization" "name" "Lithespan" "url" site.BaseURL "email" site.Params.email "description" site.Params.description "sameAs" (slice site.Params.github) }}
-{{ $website := dict "@context" "https://schema.org" "@type" "WebSite" "name" "Lithespan" "url" site.BaseURL "description" site.Params.description "publisher" (dict "@type" "Organization" "name" "Lithespan" "url" site.BaseURL) }}
-<script type="application/ld+json">{{ $organization | jsonify | safeJS }}</script>
-<script type="application/ld+json">{{ $website | jsonify | safeJS }}</script>
+{{ $organizationID := printf "%s#organization" site.BaseURL }}
+{{ $websiteID := printf "%s#website" site.BaseURL }}
+{{ $organization := dict "@id" $organizationID "@type" "Organization" "name" "Lithespan" "url" site.BaseURL "email" site.Params.email "description" site.Params.description "sameAs" (slice site.Params.github) }}
+{{ $website := dict "@id" $websiteID "@type" "WebSite" "name" "Lithespan" "url" site.BaseURL "description" site.Params.description "publisher" (dict "@id" $organizationID) }}
+{{ $graph := dict "@context" "https://schema.org" "@graph" (slice $organization $website) }}
+<script type="application/ld+json">{{ $graph | jsonify | safeJS }}</script>
 {{ else if not $is404 }}
 {{ $webpage := dict "@context" "https://schema.org" "@type" "WebPage" "name" .Title "url" .Permalink "description" (.Description | default site.Params.description) "isPartOf" (dict "@type" "WebSite" "name" "Lithespan" "url" site.BaseURL) }}
 <script type="application/ld+json">{{ $webpage | jsonify | safeJS }}</script>

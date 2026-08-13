@@ -1,6 +1,6 @@
 ---
 title: "What we build"
-description: "Languages, compilers, runtimes, systems software, packages, binaries, and images for specific hardware and operating systems."
+description: "Languages, compilers, runtimes, systems software, packages, binaries, container images, and machine images for specific hardware and operating systems."
 date: 2026-08-07
 lastmod: 2026-08-13
 cta_title: "Have a target in mind?"
@@ -21,11 +21,13 @@ Optimization can cover profiling, PGO, LTO, JIT or AOT policy, garbage collectio
 
 Examples include proxies, schedulers, container tooling, data planes, messaging systems, databases, caches, storage, and other native software. Tests preserve the workload’s durability, topology, failure, kernel, network, and storage assumptions.
 
-## Packages, native binaries, and images
+## Packages, binaries, and images
 
 Native outputs target a specific distribution, libc, system ABI, architecture, and dependency set. Delivery can include Debian, RPM, Alpine, FreeBSD, Nix, and signed archives.
 
-OCI images use the same tested payload. Immutable references connect each output to its benchmarks, compatibility results, SBOM, provenance, and support record.
+OCI images use the same tested payload. Machine images can combine the OS, kernel, drivers, runtimes, libraries, and application configuration for a defined fleet. Outputs can include AMIs, Azure managed images or VHDs, Google Cloud custom images, qcow2, and OVA.
+
+Image tests can cover boot, workload behavior, upgrades, rollback, and failure recovery. Immutable references connect each output to its benchmarks, compatibility results, SBOM, provenance, and support record.
 
 ## What becomes a stable release
 

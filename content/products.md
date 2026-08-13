@@ -1,43 +1,32 @@
 ---
-title: "Products"
-description: "Optimized compilers, runtimes, infrastructure software, OS packages, and OCI images for declared hardware and operating-system targets."
+title: "What we build"
+description: "Languages, compilers, runtimes, systems software, packages, binaries, and images for specific hardware and operating systems."
 date: 2026-08-07
-lastmod: 2026-08-07
-cta_label: "PRIVATE RELEASES"
-cta_title: "Need a target we do not publish?"
-cta_body: "Send us the software, OS, CPU, workload, output format, and support window."
-cta_button: "Discuss a private release"
+lastmod: 2026-08-13
+cta_title: "Have a target in mind?"
+cta_body: "Send us the software, hardware, OS, workload, format, and support window."
+cta_button: "Discuss the target"
 cta_subject: "Lithespan private release"
 ---
 
-Lithespan builds maintained releases from upstream source for a declared operating system, CPU, workload, and delivery format. Public releases are free and include their build definitions and evidence.
+Lithespan builds new software and maintains optimized releases of existing projects. Scope is defined by the software, hardware, OS, workload, format, and support term.
 
-## Compilers and runtimes
+## Languages, compilers, and runtimes
 
-Targets include C and C++ toolchains, Go, Java and JVM components, JavaScript and TypeScript runtimes such as Node.js, Deno, and Bun, .NET, Python, Ruby, and Rust.
+Work can cover language implementations, compilers, interpreters, standard libraries, build tools, and runtimes across C, C++, Go, Java, JavaScript, .NET, Python, Ruby, Rust, and other languages.
 
-Optimization can cover PGO and LTO, compiler flags, JIT or AOT policy, garbage collection, allocators, linking, native libraries, startup behavior, and architecture-specific code paths. The useful choices depend on the runtime and workload.
+Optimization can cover profiling, PGO, LTO, JIT or AOT policy, garbage collection, allocators, linking, startup, and hardware-specific code paths.
 
-## Infrastructure software
+## Systems and infrastructure software
 
-Candidate targets include:
+Examples include proxies, schedulers, container tooling, data planes, messaging systems, databases, caches, storage, and other native software. Tests preserve the workload’s durability, topology, failure, kernel, network, and storage assumptions.
 
-- NGINX, HAProxy, and Envoy
-- Kafka and RabbitMQ
-- PostgreSQL and MySQL
-- Redis, Valkey, and Memcached
-- etcd, containerd, Cilium, and selected service-mesh data planes
+## Packages, native binaries, and images
 
-Qualification reflects how the software runs. Database results state durability and storage assumptions. Messaging results state topology, replication, backpressure, and failure behavior. Kubernetes components include their kernel, eBPF, CNI, network, storage, and compatibility requirements.
+Native outputs target a specific distribution, libc, system ABI, architecture, and dependency set. Delivery can include Debian, RPM, Alpine, FreeBSD, Nix, and signed archives.
 
-## Operating-system packages
+OCI images use the same tested payload. Immutable references connect each output to its benchmarks, compatibility results, SBOM, provenance, and support record.
 
-Native packages and binaries target a declared distribution, libc, system ABI, architecture, and dependency boundary. Outputs can include Debian, RPM, Alpine, FreeBSD, Nix, and signed archives.
+## What becomes a stable release
 
-## OCI images
-
-Docker-compatible images use the same qualified payload as native packages and archives. Immutable references connect each image to its benchmark, compatibility, SBOM, provenance, and support records.
-
-## What reaches stable support
-
-A successful build is only a candidate. A target becomes stable when Lithespan can maintain its upstream watch, test suite, benchmark baseline, release pipeline, supported outputs, and end-of-support date. See the [release model](/release-model/) for the full qualification standard.
+A release becomes stable when Lithespan can maintain its source watch, tests, benchmark baseline, build pipeline, outputs, and support date. [See the release process.](/how-it-works/)

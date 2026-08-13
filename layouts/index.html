@@ -2,62 +2,65 @@
 <section class="hero" aria-labelledby="hero-title">
   <div class="shell hero-grid">
     <div class="hero-copy">
-      <h1 id="hero-title">Optimized software for your hardware and operating system.</h1>
-      <p class="lede">Lithespan builds and maintains performance-optimized releases of compilers, runtimes, infrastructure software, OS packages, and OCI images for specific CPU and OS targets.</p>
+      <h1 id="hero-title">Software built for your hardware and OS.</h1>
+      <p class="lede">Lithespan builds and maintains compilers, runtimes, systems software, packages, binaries, and images for specific hardware, operating systems, and workloads. Each release includes performance, compatibility, security, and lifecycle evidence.</p>
       <div class="actions">
-        <a class="button button-primary" href="mailto:{{ site.Params.email }}?subject=Lithespan%20workload%20assessment">Discuss your workload</a>
-        <a class="button button-secondary" href="/release-model/">How releases work</a>
+        <a class="button button-primary" href="mailto:{{ site.Params.email }}?subject=Lithespan%20workload%20assessment">Assess a workload</a>
+        <a class="button button-secondary" href="/how-it-works/">See how it works</a>
       </div>
-      <p class="scope-note">Public releases are free. Private targets, migration, maintenance extensions, and guarantees are paid.</p>
+      <p class="scope-note">Public releases are free. Private builds, migration, and guaranteed support are paid.</p>
     </div>
+  </div>
+</section>
+
+<section class="proof-strip" aria-label="What defines a Lithespan release">
+  <div class="shell proof-grid">
+    <div><strong>Targeted</strong><span>Hardware, OS, workload, and format are explicit.</span></div>
+    <div><strong>Measured</strong><span>Reports state methods, baselines, regressions, and trade-offs.</span></div>
+    <div><strong>Maintained</strong><span>Stable releases have an owner and support window.</span></div>
   </div>
 </section>
 
 <section class="products section-pad" aria-labelledby="products-title">
   <div class="shell">
-    <div class="section-heading split-heading">
+    <div class="section-heading section-heading-wide">
       <div>
-        <p class="section-label">PRODUCTS</p>
-        <h2 id="products-title">Optimized below the application layer.</h2>
+        <h2 id="products-title">Software across the stack.</h2>
+        <p>Bring the software and the target. We build, optimize, package, test, and maintain the result.</p>
       </div>
-      <a class="text-link heading-link" href="/products/">View product scope</a>
     </div>
 
     <div class="product-grid compact-grid">
       <article>
-        <p class="product-label">Compilers and runtimes</p>
-        <h3>C, C++, Go, Java, JS/TS, .NET, Python, Ruby, and Rust.</h3>
+        <h3>Languages, compilers, and runtimes</h3>
+        <p>Implementations, toolchains, interpreters, standard libraries, and runtime systems.</p>
       </article>
       <article>
-        <p class="product-label">Infrastructure software</p>
-        <h3>NGINX, Envoy, etcd, containerd, Cilium, messaging, databases, and caches.</h3>
+        <h3>Systems software</h3>
+        <p>Proxies, schedulers, storage, messaging, databases, caches, and native libraries.</p>
       </article>
       <article>
-        <p class="product-label">Operating-system packages</p>
-        <h3>Native packages for declared distributions, system ABIs, and architectures.</h3>
+        <h3>Packages and binaries</h3>
+        <p>Native outputs for specific distributions, system ABIs, architectures, and dependency sets.</p>
       </article>
       <article>
-        <p class="product-label">OCI images</p>
-        <h3>Docker-compatible images built from the same qualified releases.</h3>
+        <h3>OCI images</h3>
+        <p>Docker-compatible images linked to the same tested payload and evidence.</p>
       </article>
     </div>
+    <a class="text-link section-link" href="/products/">Explore what we build</a>
   </div>
 </section>
 
 <section class="section-dark section-pad" aria-labelledby="model-title">
   <div class="shell model-compact">
     <div>
-      <p class="section-label">RELEASE MODEL</p>
-      <h2 id="model-title">A release is a target, not a generic binary.</h2>
+      <h2 id="model-title">Evidence is part of the release.</h2>
     </div>
     <div class="model-definition">
       <p class="model-formula">Software × OS × CPU × workload × format</p>
-      <p>Every release states its source, target, benchmark method, compatibility results, SBOM, provenance, signatures, and maintenance window.</p>
-      <div class="inline-links inline-links-dark">
-        <a class="text-link text-link-dark" href="/release-model/">Release model</a>
-        <a class="text-link text-link-dark" href="/security/">Security</a>
-        <a class="text-link text-link-dark" href="/maintenance/">Maintenance</a>
-      </div>
+      <p>Benchmarks, compatibility tests, SBOMs, provenance, signatures, and support dates point to the same build.</p>
+      <a class="text-link text-link-dark" href="/how-it-works/">Follow the release path</a>
     </div>
   </div>
 </section>
@@ -65,13 +68,12 @@
 <section class="contact section-pad" aria-labelledby="contact-title">
   <div class="shell contact-panel">
     <div>
-      <p class="section-label">SERVICES</p>
-      <h2 id="contact-title">Bring us a workload.</h2>
-      <p>We assess the current system, build for the agreed target, support migration, and requalify releases as upstream software and fleets change.</p>
+      <h2 id="contact-title">Start with one workload.</h2>
+      <p>We establish a baseline, test changes on relevant hardware, and provide the evidence for a production decision.</p>
     </div>
     <div class="contact-action">
-      <a class="button button-primary" href="mailto:{{ site.Params.email }}?subject=Lithespan%20workload%20assessment">Discuss your workload</a>
-      <a class="text-link contact-link" href="/services/">Services and deliverables</a>
+      <a class="button button-primary" href="mailto:{{ site.Params.email }}?subject=Lithespan%20workload%20assessment">Assess a workload</a>
+      <a class="text-link contact-link" href="/services/">View services and deliverables</a>
     </div>
   </div>
 </section>

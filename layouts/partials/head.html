@@ -19,18 +19,18 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Lithespan">
-<meta property="og:title" content="{{ if .IsHome }}Lithespan | Software optimized for your hardware and OS{{ else }}{{ .Title }} | Lithespan{{ end }}">
+<meta property="og:title" content="{{ if .IsHome }}Lithespan | Software built for your hardware and OS{{ else }}{{ .Title }} | Lithespan{{ end }}">
 <meta property="og:description" content="{{ .Description | default site.Params.description }}">
 <meta property="og:url" content="{{ .Permalink }}">
 <meta property="og:image" content="{{ site.Params.ogImage | absURL }}">
-<meta property="og:image:alt" content="Lithespan - software optimized for your hardware and OS">
+<meta property="og:image:alt" content="Lithespan - software built for your hardware and operating system">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{{ if .IsHome }}Lithespan | Software optimized for your hardware and OS{{ else }}{{ .Title }} | Lithespan{{ end }}">
+<meta name="twitter:title" content="{{ if .IsHome }}Lithespan | Software built for your hardware and OS{{ else }}{{ .Title }} | Lithespan{{ end }}">
 <meta name="twitter:description" content="{{ .Description | default site.Params.description }}">
 <meta name="twitter:image" content="{{ site.Params.ogImage | absURL }}">
 {{ end }}
 
-<title>{{ if $is404 }}Page not found | Lithespan{{ else if .IsHome }}Lithespan | Software optimized for your hardware and OS{{ else }}{{ .Title }} | Lithespan{{ end }}</title>
+<title>{{ if $is404 }}Page not found | Lithespan{{ else if .IsHome }}Lithespan | Software built for your hardware and OS{{ else }}{{ .Title }} | Lithespan{{ end }}</title>
 
 <script>
   (function () {

@@ -1,22 +1,26 @@
 # Lithespan
 
-> Lithespan builds and maintains hardware- and OS-optimized software releases for defined CPU architectures, workloads, delivery formats, and support windows.
+> Lithespan builds and maintains software for specific hardware, operating systems, and workloads.
 
-Standard public releases, build definitions, and evidence are free. Customers pay for workload assessment, private composition, fleet-specific tuning, architecture migration, recurring qualification, extended maintenance, and contractual guarantees.
+Lithespan works across languages, compilers, runtimes, systems software, packages, binaries, and images. Each release links the build to its performance, compatibility, security, formats, and support term.
 
-## Products
+Public releases and evidence are free. Paid work includes assessments, private builds, migration, recurring testing, maintenance extensions, and guarantees.
 
-- [Products](https://lithespan.com/products/): Compilers, language runtimes, infrastructure software, operating-system packages, and OCI images.
-- [Release model](https://lithespan.com/release-model/): How platform, architecture, workload, output, evidence, and support state define a release.
-- [Formats and distribution](https://lithespan.com/formats/): OCI images, native packages, archives, Nix outputs, and later system images.
+## Core pages
 
-## Trust and lifecycle
+- [Home](https://lithespan.com/): What Lithespan builds and how public and private work differ.
+- [What we build](https://lithespan.com/products/): Languages, compilers, runtimes, systems software, packages, binaries, and OCI images.
+- [How it works](https://lithespan.com/how-it-works/): Target definition, build, testing, security, distribution, and maintenance.
+- [Services](https://lithespan.com/services/): Assessment, private builds, migration, regression testing, and lifecycle maintenance.
 
-- [Security and supply chain](https://lithespan.com/security/): SBOMs, provenance, signatures, vulnerability monitoring, tests, and rebuild policy.
-- [Maintenance and support](https://lithespan.com/maintenance/): Upstream-aligned public maintenance and paid Extended Maintenance.
+## Release details
 
-## Work with Lithespan
+- [Performance evidence](https://lithespan.com/how-it-works/#performance): Benchmark context, baselines, regressions, and trade-offs.
+- [Security and supply chain](https://lithespan.com/how-it-works/#security): SBOMs, provenance, signatures, vulnerability handling, and rebuilds.
+- [Maintenance and support](https://lithespan.com/how-it-works/#maintenance): Public support windows, paid obligations, and time-bound extensions.
+- [Formats and distribution](https://lithespan.com/how-it-works/#formats): Images, native packages, archives, Nix outputs, and private distribution.
 
-- [Services](https://lithespan.com/services/): Efficiency assessments, custom releases, architecture migrations, regression qualification, and lifecycle maintenance.
-- [GitHub](https://github.com/lithespan): Public source, release, and evidence repositories.
-- [Contact](mailto:contact@lithespan.com): Discuss a software and platform target.
+## Contact
+
+- [Email](mailto:contact@lithespan.com): Discuss a software target or report a security issue.
+- [GitHub](https://github.com/lithespan): Public source and release repositories.

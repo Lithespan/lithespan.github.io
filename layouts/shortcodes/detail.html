@@ -1,0 +1,8 @@
+<details class="detail-panel" id="{{ .Get "id" }}"{{ if eq (.Get "open") "true" }} open{{ end }}>
+  <summary>
+    <span class="detail-title">{{ .Get "title" }}</span>
+    {{ with .Get "summary" }}<span class="detail-summary">{{ . }}</span>{{ end }}
+    <span class="detail-marker" aria-hidden="true"></span>
+  </summary>
+  <div class="detail-body">{{ .Inner | markdownify }}</div>
+</details>

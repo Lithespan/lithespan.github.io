@@ -6,7 +6,7 @@ cleanDestinationDir = true
 disableKinds = ["taxonomy", "term", "RSS"]
 
 [params]
-  description = "Lithespan builds and maintains hardware- and OS-optimized releases of compilers, runtimes, infrastructure software, operating-system packages, and OCI images."
+  description = "Lithespan builds and maintains software for defined hardware, operating systems, and workloads, from languages and compilers to runtimes, systems software, packages, and images."
   email = "contact@lithespan.com"
   github = "https://github.com/lithespan"
   ogImage = "/og.jpg"

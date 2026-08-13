@@ -1,35 +1,30 @@
 ---
 title: "Services"
-description: "Workload assessment, private optimized releases, architecture migration, regression testing, and lifecycle maintenance."
+description: "Assess, build, migrate, and maintain software for a specific operating target."
 date: 2026-08-07
-lastmod: 2026-08-07
-cta_label: "START A PROJECT"
-cta_title: "Send us the current system."
-cta_body: "Include the software, platform, hardware, workload constraint, and the decision you need to make."
-cta_button: "Discuss your workload"
+lastmod: 2026-08-13
+cta_title: "Bring us the current system."
+cta_body: "Include the software, hardware, OS, workload, and decision you need to make."
+cta_button: "Assess a workload"
 cta_subject: "Lithespan workload assessment"
 ---
 
-Lithespan measures a production workload, builds for its operating target, proves the result on relevant hardware, and maintains the release as upstream software and fleets change.
+Start with the current system and the decision you need to make. Lithespan establishes a baseline before recommending changes.
 
-## Efficiency assessment
+{{< detail id="assess" title="Assess a workload" summary="Establish a reproducible baseline and identify changes worth testing." open="true" >}}
+We profile the system, test viable changes, and deliver a baseline, benchmark results, a cost model when measurable, and a recommendation. Use this service to investigate bottlenecks, compare targets, or decide whether a custom build is worthwhile.
+{{< /detail >}}
 
-We establish a reproducible baseline, profile the current system, test viable changes, and deliver benchmark results, a savings model, and a migration recommendation.
+{{< detail id="build" title="Build or migrate" summary="Produce a tested release for the agreed workload and operating target." >}}
+We build and test software for the agreed hardware, OS, workload, and format. The release record includes benchmarks, compatibility results, trade-offs, and a maintenance proposal.
 
-## Private optimized release
+Migration can cover hardware, OS, toolchain, architecture, or fleet changes. It includes dependency analysis, multi-target builds, rollout planning, and rollback preparation.
+{{< /detail >}}
 
-We build and qualify a compiler, runtime, infrastructure component, OS package set, native binary, or OCI image for the agreed workload and platform. The release pack includes tests, evidence, known trade-offs, and a maintenance proposal.
+{{< detail id="maintain" title="Maintain and requalify" summary="Repeat the evidence as upstream software, fleets, and requirements change." >}}
+We maintain workload tests, compare versions or targets, rebuild after relevant source changes, and issue regression reports. Agreements can add private distribution, more targets, a rebuild schedule, response terms, and time-bound support extensions.
+{{< /detail >}}
 
-## Architecture and fleet migration
+## Privacy
 
-We qualify x86-to-Arm moves, newer ISA targets, and processor-fleet changes through dependency analysis, multi-architecture builds, compatibility tests, workload benchmarks, rollout planning, and rollback preparation.
-
-## Infrastructure optimization
-
-We tune proxies, Kubernetes components, databases, caches, and messaging systems against stated workload and failure assumptions. Targets can include NGINX, HAProxy, Envoy, etcd, containerd, Cilium, service-mesh data planes, Kafka, RabbitMQ, PostgreSQL, MySQL, Redis, Valkey, and Memcached.
-
-## Regression and lifecycle service
-
-We maintain customer-specific workload harnesses, compare versions or architectures, requalify releases after upstream changes, and issue recurring reports. Agreements can include private distribution, architecture expansion, response terms, and [Extended Maintenance](/maintenance/).
-
-Customer traces, dependencies, configurations, and fleet profiles remain private. General improvements can move upstream or into public [product releases](/products/) after customer information is removed.
+Customer traces, dependencies, configurations, and fleet profiles remain private. General improvements can move upstream only after customer information is removed.

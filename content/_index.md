@@ -1,6 +1,6 @@
 ---
-title: "Software optimized for your hardware and OS"
-description: "Hardware- and OS-optimized software releases, tested against defined workloads and maintained for declared support windows."
+title: "Software built for your hardware and OS"
+description: "Languages, compilers, runtimes, systems software, packages, and images built for specific hardware, operating systems, and workloads."
 date: 2026-08-07
-lastmod: 2026-08-07
+lastmod: 2026-08-13
 ---

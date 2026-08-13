@@ -18,7 +18,7 @@ hugo --gc --minify --panicOnWarning
 
 ## Performance budget
 
-The site uses system fonts, no client framework, and one small local script for the persistent light, dark, and automatic theme preference. The generated home page should stay within these uncompressed limits:
+The site uses system fonts, no client framework, and one small local script for a persistent light or dark preference. The visitor’s system setting is used until they choose a theme. The generated home page should stay within these uncompressed limits:
 
 - HTML: 35 KB
 - CSS: 25 KB

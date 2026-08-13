@@ -19,7 +19,7 @@ Six fields define the work:
 - **Hardware:** architecture, required features, accelerators, and fleet constraints
 - **OS:** distribution, kernel, libc, system ABI, and required services
 - **Workload:** performance, memory, startup, compatibility, or another measured goal
-- **Format:** image, native package, binary, archive, or another tested output
+- **Format:** container image, machine image, native package, binary, archive, or another tested output
 - **Support:** update scope, response terms, and end date
 
 Targets can be portable, architecture-specific, accelerator-aware, or tuned for a particular fleet.
@@ -53,10 +53,10 @@ Public stable releases state their version line and support window. Artifacts an
 Paid agreements can add private targets, rebuild schedules, regression reports, controlled distribution, response times, and performance or compatibility obligations. Time-bound extensions may be available after upstream support ends.
 {{< /detail >}}
 
-{{< detail id="formats" title="Formats and distribution" summary="Different package and registry formats point to the same tested payload." >}}
-Outputs can include OCI images, signed native packages, archives, and Nix outputs. Each format points to the same tested build.
+{{< detail id="formats" title="Formats and distribution" summary="Packages, container images, and machine images point to the same tested release." >}}
+Outputs can include OCI images, AMIs, Azure managed images or VHDs, Google Cloud custom images, qcow2, OVA, signed native packages, archives, and Nix outputs. Each format points to the same tested build.
 
-Public artifacts need no account. Private repositories and caches are available for customer code, access controls, or policy.
+Machine images can include the agreed OS, kernel, drivers, runtimes, libraries, and application configuration. Public artifacts need no account. Customer-specific images are delivered privately into the customer’s account or repository.
 {{< /detail >}}
 
 ## Upstream policy

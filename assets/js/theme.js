@@ -49,5 +49,33 @@
     if (!document.documentElement.dataset.theme) updateControl();
   });
 
+  function revealHashTarget() {
+    if (!window.location.hash) return;
+
+    var id = window.location.hash.slice(1);
+    var target = null;
+
+    try {
+      target = document.getElementById(decodeURIComponent(id));
+    } catch (error) {
+      target = document.getElementById(id);
+    }
+
+    if (!target || !target.matches("details.detail-panel")) return;
+    target.open = true;
+    window.requestAnimationFrame(function () {
+      target.scrollIntoView({ block: "start" });
+    });
+  }
+
+  var mobileMenu = document.querySelector(".mobile-menu");
+  if (mobileMenu) {
+    mobileMenu.addEventListener("click", function (event) {
+      if (event.target.closest("nav a")) mobileMenu.open = false;
+    });
+  }
+
+  window.addEventListener("hashchange", revealHashTarget);
   applyTheme(stored, false);
+  revealHashTarget();
 }());

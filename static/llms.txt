@@ -2,14 +2,14 @@
 
 > Lithespan builds and maintains software for specific hardware, operating systems, and workloads.
 
-Lithespan works across languages, compilers, runtimes, systems software, packages, binaries, and images. Each release links the build to its performance, compatibility, security, formats, and support term.
+Lithespan works across languages, compilers, runtimes, systems software, packages, binaries, container images, and machine images. Each release links the build to its performance, compatibility, security, formats, and support term.
 
 Public releases and evidence are free. Paid work includes assessments, private builds, migration, recurring testing, maintenance extensions, and guarantees.
 
 ## Core pages
 
 - [Home](https://lithespan.com/): What Lithespan builds and how public and private work differ.
-- [What we build](https://lithespan.com/products/): Languages, compilers, runtimes, systems software, packages, binaries, and OCI images.
+- [What we build](https://lithespan.com/products/): Languages, compilers, runtimes, systems software, packages, binaries, container images, and machine images.
 - [How it works](https://lithespan.com/how-it-works/): Target definition, build, testing, security, distribution, and maintenance.
 - [Services](https://lithespan.com/services/): Assessment, private builds, migration, regression testing, and lifecycle maintenance.
 
@@ -18,7 +18,7 @@ Public releases and evidence are free. Paid work includes assessments, private b
 - [Performance evidence](https://lithespan.com/how-it-works/#performance): Benchmark context, baselines, regressions, and trade-offs.
 - [Security and supply chain](https://lithespan.com/how-it-works/#security): SBOMs, provenance, signatures, vulnerability handling, and rebuilds.
 - [Maintenance and support](https://lithespan.com/how-it-works/#maintenance): Public support windows, paid obligations, and time-bound extensions.
-- [Formats and distribution](https://lithespan.com/how-it-works/#formats): Images, native packages, archives, Nix outputs, and private distribution.
+- [Formats and distribution](https://lithespan.com/how-it-works/#formats): OCI images, AMIs, Azure images and VHDs, Google Cloud images, qcow2, OVA, native packages, archives, Nix outputs, and private distribution.
 
 ## Contact
 

@@ -8,10 +8,9 @@
       <p>Software built and maintained for defined hardware, operating systems, and workloads.</p>
     </div>
     <nav class="footer-nav" aria-label="Footer navigation">
-      <a href="/products/">What we build</a>
-      <a href="/how-it-works/">How it works</a>
-      <a href="/services/">Services</a>
-      <a href="/how-it-works/#security">Security</a>
+      <a href="/products/"{{ if eq .RelPermalink "/products/" }} aria-current="page"{{ end }}>What we build</a>
+      <a href="/how-it-works/"{{ if eq .RelPermalink "/how-it-works/" }} aria-current="page"{{ end }}>How it works</a>
+      <a href="/services/"{{ if eq .RelPermalink "/services/" }} aria-current="page"{{ end }}>Services</a>
     </nav>
     <div class="footer-contact">
       <a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a>

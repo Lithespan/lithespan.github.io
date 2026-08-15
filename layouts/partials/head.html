@@ -5,6 +5,9 @@
 <meta name="theme-color" content="#f3f0e6" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#071d1a" media="(prefers-color-scheme: dark)">
 <meta name="description" content="{{ .Description | default site.Params.description }}">
+{{ if .IsHome }}
+<meta name="google-site-verification" content="pg5h7ikw9yiGN_KhE0idO4kjhJmF9E7gtf8q8EL-fys">
+{{ end }}
 {{ if $is404 }}
 <meta name="robots" content="noindex, nofollow">
 {{ else }}
